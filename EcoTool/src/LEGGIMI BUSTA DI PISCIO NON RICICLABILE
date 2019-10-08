@@ -1,0 +1,15 @@
+		divertiti a fare modAutostrade, manca da implementare il bottone modifica
+		il database sta qui, elenco a sinistra in fondo.
+		troverai un pezzo di codice fatto
+		sql nudo e crudo
+		
+		//no
+	//no	se hai tempo SQLTariffe ha bisogno di prendere i dati dalle textfield
+	//no	e fare update nella table tariffe
+	//no	se not funge, dit'ar culo
+		//no
+		
+		Materiale:
+		https://alvinalexander.com/java/java-mysql-update-query-example
+		https://www.geeksforgeeks.org/performing-database-operations-java-sql-create-insert-update-delete-select/
+		https://www.codejava.net/java-se/jdbc/jdbc-tutorial-sql-insert-select-update-and-delete-examples
