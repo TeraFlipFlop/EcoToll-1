@@ -11,6 +11,7 @@ import javax.swing.table.TableColumn;
 import view.Login;
 import controller.AutostradaCtrl;
 import controller.LoginController;
+import model.DAO.*;
 import model.database.database;
 
 import javax.swing.JButton;
@@ -41,7 +42,6 @@ import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import java.awt.TextArea;
 import javax.swing.JList;
-import model.sql.*;
 public class mostra  extends JFrame{
 	public mostra(int i,String auto) {
 		this.setBounds(200, 200, 484, 364);

@@ -1,4 +1,4 @@
-package model.sql;
+package model.DAO;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +17,7 @@ import model.componenti.Casello;
 import model.database.database;
 import view.InterfacciaAdmin.mostra;
 
-public class SQLAutostrada {
+public class AutostradaDAO {
 	
 public LinkedList<String>  AutostradeByUser(String user) {
 		LinkedList<String> alist=new LinkedList<String>();

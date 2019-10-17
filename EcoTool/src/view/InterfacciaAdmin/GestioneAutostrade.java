@@ -13,8 +13,8 @@ import com.mysql.jdbc.PreparedStatement;
 
 import controller.AutostradaCtrl;
 import controller.LoginController;
+import model.DAO.AutostradaDAO;
 import model.database.database;
-import model.sql.SQLAutostrada;
 import view.Login;
 
 import javax.swing.JButton;

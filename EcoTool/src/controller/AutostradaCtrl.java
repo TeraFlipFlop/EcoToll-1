@@ -6,24 +6,24 @@ import java.util.LinkedList;
 
 import javax.swing.DefaultListModel;
 
+import model.DAO.GestoreUtenzaDAO;
+import model.DAO.AutostradaDAO;
 import model.componenti.*;
-import model.sql.GestoreUtenza;
-import model.sql.SQLAutostrada;
 
 public class AutostradaCtrl implements AutostradaInt{
 	
 	public LinkedList<String> getAutostradebyUsername(String user) {
-		 return new SQLAutostrada().AutostradeByUser(user);
+		 return new AutostradaDAO().AutostradeByUser(user);
 	}
 	//-----v
 	public ArrayList<String> getCodCaselli(){
 		
-		return new SQLAutostrada().getCodCaselli();
+		return new AutostradaDAO().getCodCaselli();
 	}
 	//----v
 	public LinkedList<String> getCasellibyIDautostrada(String Id){
 
-		return new SQLAutostrada().getCasellibyIDautostrada(Id);//---V
+		return new AutostradaDAO().getCasellibyIDautostrada(Id);//---V
 	}
 	
 	//-----v
@@ -34,7 +34,7 @@ public class AutostradaCtrl implements AutostradaInt{
 	public void setCasello(Casello c){}
 	
 	public ArrayList<String> getCodAutostrada(){
-		return new SQLAutostrada().getCodAutostrada();
+		return new AutostradaDAO().getCodAutostrada();
 	}
 	
 	//------v
