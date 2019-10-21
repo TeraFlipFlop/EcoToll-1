@@ -1,4 +1,4 @@
-package model.sql;
+package model.DAO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 import model.database.database;
 
-public class GestoreUtenza {
+public class GestoreUtenzaDAO {
 
 	//Effettuiamo la logica del login
 	

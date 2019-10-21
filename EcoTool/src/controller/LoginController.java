@@ -1,10 +1,10 @@
 package controller;
 
-import model.sql.GestoreUtenza;
+import model.DAO.GestoreUtenzaDAO;
 
 public class LoginController {
 	
 		public String login(String username,String password) {
-			return new GestoreUtenza().login(username, password);
+			return new GestoreUtenzaDAO().login(username, password);
 		}		
 }

@@ -5,8 +5,8 @@ import java.util.LinkedList;
 
 import javax.swing.DefaultListModel;
 
+import model.DAO.GestoreUtenzaDAO;
 import model.componenti.*;
-import model.sql.GestoreUtenza;
 
 public interface AutostradaInt {
 	
