@@ -1,16 +1,18 @@
 package model.componenti;
 
 enum ClasseAmbienale{Euro1,Euro2,Euro3,Euro4,Euro5,Euro6}
-
-abstract class  Veicolo {
+enum Classe{classeA,classeB,classe3,Classe4,classe5};
+public class  Veicolo {
 public String targa,modello,marca;
 public int anno, peso, co2, assi;
 public double altezza;
 ClasseAmbienale classeAmbientale;
+public Classe classe;
+
 
 
 public Veicolo(String targa, String modello, String marca, int anno, int peso, int co2, int assi, ClasseAmbienale classeAmbientale2,
-		double altezza) {
+		double altezza,Classe classe) {
 	this.targa = targa;
 	this.modello = modello;
 	this.marca = marca;
@@ -20,6 +22,8 @@ public Veicolo(String targa, String modello, String marca, int anno, int peso, i
 	this.assi = assi;
 	this.classeAmbientale = classeAmbientale2;
 	this.altezza = altezza;
+	this.classe= classe;
+
 }
 
 public String getTarga() {
@@ -78,6 +82,14 @@ public double getAltezza() {
 }
 public void setAltezza(double altezza) {
 	this.altezza = altezza;
+}
+
+public Classe getClasse() {
+	return classe;
+}
+
+public void setClasse(Classe classe) {
+	this.classe = classe;
 }
 
 }

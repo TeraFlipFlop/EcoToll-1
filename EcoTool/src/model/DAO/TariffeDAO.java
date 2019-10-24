@@ -3,27 +3,31 @@ package model.DAO;
 public class TariffeDAO implements TariffeDAO_I{
 
 	@Override
-	public double get_tariffa(String classe, String tipo) {
-		// TODO Auto-generated method stub
+	public double get_tariffa(String classe, String tipo) { //a b 3 4 5 
+		// sql  select tariffa from tariffe where classe = classe  and tipo = tipo
+		
+		
+		
+		
 		return 0;
 	}
 
 	@Override
-	public double get_oneri(String ClasseAmb) {
-		// TODO Auto-generated method stub
+	public double get_oneri(String ClasseAmb) {//euro 1 2 3 4 5 6
+		// 
 		return 0;
 	}//------------------
 	//update tariffe values(----) where tipo = tipo
 
 	@Override
-	public void update_tariffe(double A, double B, double c3, double c4, double c5, String tipo) {
-		// TODO Auto-generated method stub
+	public void update_tariffe(double A[], String tipo) {
+		// A[] prende i dati dalle textarea e li mette in un array
 		
 	}
 
 	@Override
-	public void update_oneri(double E1, double E2, double E3, double E4, double E5, double E6) {
-		// TODO Auto-generated method stub
+	public void update_oneri(double E[]) {
+		//E[] prende i dati dalle textarea e li mette in un array
 		
 	}
 
