@@ -1,5 +1,5 @@
 package model.componenti;
-
+import model.componenti.Veicolo;
 import model.interfacce.PedaggioInter;
 
 public class Pedaggio implements PedaggioInter {
@@ -11,6 +11,36 @@ public Pedaggio(Percorso percorso, Autostrada autostrada) {
 	
 	this.percorso = percorso;
 	this.autostrada = autostrada;
+}
+
+@Override
+public int hashCode() {
+	// TODO Auto-generated method stub
+	return super.hashCode();
+}
+
+@Override
+public boolean equals(Object obj) {
+	// TODO Auto-generated method stub
+	return super.equals(obj);
+}
+
+@Override
+protected Object clone() throws CloneNotSupportedException {
+	// TODO Auto-generated method stub
+	return super.clone();
+}
+
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return super.toString();
+}
+
+@Override
+protected void finalize() throws Throwable {
+	// TODO Auto-generated method stub
+	super.finalize();
 }
 
 public int getIva() {
@@ -46,29 +76,10 @@ public void setAutostrada(Autostrada autostrada) {
 	public double tarParziale(int i){return this.percorso.KmPercorsi() *(this.autostrada.getTariffe()[i]); }
 
 	@Override
-	public double tariffaFinale(ClasseA a) {
+	public double tariffaFinale(Veicolo v) {
 		return arrotondamento(this.tarParziale(0)+(this.tarParziale(0)*this.iva/100 ));
 	}
 
-	@Override
-	public double tariffaFinale(ClasseB a) {
-		return arrotondamento(this.tarParziale(1)+(this.tarParziale(1)*this.iva/100 ));
-	}
-
-	@Override
-	public double tariffaFinale(Classe3 a) {
-		return arrotondamento(this.tarParziale(2)+(this.tarParziale(2)*this.iva/100 ));
-	}
-
-	@Override
-	public double tariffaFinale(Classe4 a) {
-		return arrotondamento(this.tarParziale(3)+(this.tarParziale(3)*this.iva/100 ));
-	}
-
-	@Override
-	public double tariffaFinale(Classe5 a) {
-		return arrotondamento(this.tarParziale(4)+(this.tarParziale(4)*this.iva/100 ));
-	}
-
+	
 	
 }
