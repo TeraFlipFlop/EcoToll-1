@@ -91,11 +91,22 @@ public class ModAutostrada extends JFrame {
 		JButton btnModifica = new JButton("Applica");
 		btnModifica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Connection con = new database().Connect();
+				
 				String codice =textField_1.getText();
-				String tipo = textField_1.getText() ;
+				String tipo = textField_3.getText() ;
 				String nome = textField_2.getText() ;
-				String qq = "UPDATE pedaggiautostrade.autostrada SET  Nome = '"+ nome+"', Tipo = '"+ tipo  +"' WHERE (Codice ='"+  codice +"');";
+				new AutostradaCtrl().modAutostradaCtrl(codice, tipo, nome);
+				
+				}
+			
+				//Connection con = new database().Connect();//
+				//String codice =textField_1.getText();
+				//String tipo = textField_3.getText() ;
+				//String nome = textField_2.getText() ;
+				
+				
+				
+			/*	String qq = "UPDATE pedaggiautostrade.autostrada SET  Nome = '"+ nome+"', Tipo = '"+ tipo  +"' WHERE (Codice ='"+  codice +"');";
 				java.sql.PreparedStatement st = null;
 				try {
 					//st=con.prepareStatement(MOD_QUERY);
@@ -110,7 +121,7 @@ public class ModAutostrada extends JFrame {
 				System.out.print("ho modificato");
 				JOptionPane.showMessageDialog(null, "modifica effettuata");
 				
-			}
+			}*/
 		});
 					//DIMENSIONE BOTTONE MODIFICA (APPLICA)
 		

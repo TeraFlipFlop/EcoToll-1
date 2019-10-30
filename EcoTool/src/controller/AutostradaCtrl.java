@@ -52,13 +52,22 @@ public ArrayList<String> getIdautostradaByusername(String user) {
 //------X
 	
 	public void modCaselloCtrl() {};//<----------update
-	public void modAutostradaCtrl() {};//<---------update
+	public void  modAutostradaCtrl(String cod,String type,String nom) {
+		new    AutostradaDAO().modAutostrada(cod, type, nom);
+		
+		
+		
+	}
+
+	
+		
+	}//<---------update
 			
 	
 	
 	
 	
-}
+
 
 	
 	

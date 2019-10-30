@@ -73,7 +73,7 @@ public class mostra  extends JFrame{
 			alist= new AutostradaCtrl().getAutostradebyUsername("");
 	
 		int j=0;
-		li="codice\t  nome\t  tipo \n";
+		li="codice\t  tipo\t  nome \n";
 		for (String s:alist) {
 			if(j<3) {li=li+" "+s+"\t ";j++;}
 			
