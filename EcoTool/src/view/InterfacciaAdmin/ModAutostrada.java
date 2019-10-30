@@ -99,29 +99,7 @@ public class ModAutostrada extends JFrame {
 				
 				}
 			
-				//Connection con = new database().Connect();//
-				//String codice =textField_1.getText();
-				//String tipo = textField_3.getText() ;
-				//String nome = textField_2.getText() ;
-				
-				
-				
-			/*	String qq = "UPDATE pedaggiautostrade.autostrada SET  Nome = '"+ nome+"', Tipo = '"+ tipo  +"' WHERE (Codice ='"+  codice +"');";
-				java.sql.PreparedStatement st = null;
-				try {
-					//st=con.prepareStatement(MOD_QUERY);
-						st=con.prepareStatement(qq);
-					//st.setString(1, "qualcosa");
-		st.execute();
-					
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				System.out.print("ho modificato");
-				JOptionPane.showMessageDialog(null, "modifica effettuata");
-				
-			}*/
+		
 		});
 					//DIMENSIONE BOTTONE MODIFICA (APPLICA)
 		

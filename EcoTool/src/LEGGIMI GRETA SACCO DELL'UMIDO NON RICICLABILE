@@ -3,11 +3,7 @@
 		troverai un pezzo di codice fatto
 		sql nudo e crudo
 		
-		//no
-	//no	se hai tempo SQLTariffe ha bisogno di prendere i dati dalle textfield
-	//no	e fare update nella table tariffe
-	//no	se not funge, fattell'tu
-		
+		vaatti a fa il modcasello in autosrtadeDAO come modautostrade
 		Materiale:
 		https://alvinalexander.com/java/java-mysql-update-query-example
 		https://www.geeksforgeeks.org/performing-database-operations-java-sql-create-insert-update-delete-select/
