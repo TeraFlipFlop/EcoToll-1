@@ -47,7 +47,7 @@ public class ModCasello extends JFrame {
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(20, 148, 130, 26);
+		textField_1.setBounds(20, 162, 130, 26);
 		getContentPane().add(textField_1);
 		
 		textField_2 = new JTextField();
@@ -57,7 +57,7 @@ public class ModCasello extends JFrame {
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(303, 148, 130, 26);
+		textField_3.setBounds(303, 162, 130, 26);
 		getContentPane().add(textField_3);
 		
 		textField_4 = new JTextField();
@@ -66,18 +66,18 @@ public class ModCasello extends JFrame {
 		getContentPane().add(textField_4);
 		
 		JLabel lblNewLabel = new JLabel("Codice");
-		lblNewLabel.setBounds(63, 136, 61, 16);
+		lblNewLabel.setBounds(63, 143, 61, 16);
 		getContentPane().add(lblNewLabel);
 		
 		JLabel lblNome = new JLabel("Nome");
 		lblNome.setBounds(63, 186, 61, 16);
 		getContentPane().add(lblNome);
 		
-		JLabel lblTipo = new JLabel("Tipo");
-		lblTipo.setBounds(344, 136, 61, 16);
+		JLabel lblTipo = new JLabel("Km");
+		lblTipo.setBounds(344, 143, 61, 16);
 		getContentPane().add(lblTipo);
 		
-		JLabel lblAmministratore = new JLabel("Amministratore");
+		JLabel lblAmministratore = new JLabel("Autostrada");
 		lblAmministratore.setBounds(323, 186, 98, 16);
 		getContentPane().add(lblAmministratore);
 		
@@ -85,10 +85,48 @@ public class ModCasello extends JFrame {
 		btnModifica.setBounds(173, 243, 117, 29);
 		getContentPane().add(btnModifica);
 		
+		
+		
+		
+		
+		
+		
+		//BOTTONE INDIETRO
+		
+JButton btnIndietro = new JButton("Indietro");
+
+btnIndietro.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+	dispose();
+	GestioneCaselli l = new GestioneCaselli (user);
+	l.setVisible(true);
+}
+});
+
+
+btnIndietro.setBounds(327, 6, 117, 29);
+getContentPane().add(btnIndietro);
+
+
+		
+		
+		
+		
+		
+		
+		
+		
 		btnModifica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//btnIndietro.DoClick();
+				
+				String codice =textField_1.getText();
+				String km = textField_3.getText() ;
+				String nome = textField_2.getText() ;
+				String autostrada =  textField_4.getText() ;
+				new AutostradaCtrl().modCaselloCtrl(codice,km, nome, autostrada);
+				
+				btnIndietro.doClick();
 		
 		
 			}
@@ -115,21 +153,5 @@ public class ModCasello extends JFrame {
 				
 					}
 				});
-				//BOTTONE INDIETRO
-				
-	JButton btnIndietro = new JButton("Indietro");
-	
-	btnIndietro.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			dispose();
-			GestioneCaselli l = new GestioneCaselli (user);
-			l.setVisible(true);
-		}
-	});
-	
-	
-	btnIndietro.setBounds(327, 6, 117, 29);
-	getContentPane().add(btnIndietro);
-		
-	}
-}
+
+}}

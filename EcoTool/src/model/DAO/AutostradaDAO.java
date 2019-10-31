@@ -20,8 +20,8 @@ import view.InterfacciaAdmin.mostra;
 
 public class AutostradaDAO {
 	
-public LinkedList<String>  AutostradeByUser(String user) {
-		LinkedList<String> alist=new LinkedList<String>();
+public ArrayList<String>  AutostradeByUser(String user) {
+		ArrayList<String> alist=new ArrayList<String>();
 		
 		String amministratore;
 		
@@ -114,12 +114,12 @@ public ArrayList<String> getCodCaselli(){
 	
 //--------------------------V
 
-public LinkedList<String> getCasellibyIDautostrada(String auto) {
+public ArrayList<String> getCasellibyIDautostrada(String auto) {
 		
 		Connection con = new database().Connect();
 		int km=0;
 		String cod = null;
-		String tipo=null;
+		
 		String nome=null;
 		String autostrada =null;
 		java.sql.PreparedStatement st = null;
@@ -130,7 +130,7 @@ public LinkedList<String> getCasellibyIDautostrada(String auto) {
 		
 		
 		
-		LinkedList<String> alist=new LinkedList<String>();
+		ArrayList<String> alist=new ArrayList<String>();
 		
 		
 		try {
@@ -235,7 +235,30 @@ public void deletecasello(String id) {
 	
 //--------------------------X
 
-public void modCasello() {};//<----------update
+public void modCasello(String cod, String km, String nom, String au) {
+	
+	Connection con = new database().Connect();
+
+	
+	
+	String q= "UPDATE `pedaggiautostrade`.`casello` SET `Km` = '"+km+"', `nome` = '"+nom+"', `Autostrada` = '"+au+"'  WHERE (`codice` = '"+cod+"');";
+	
+	java.sql.PreparedStatement st = null;
+	try {
+		
+			st=con.prepareStatement(q);
+	
+st.execute();
+		
+	} catch (SQLException e1) {
+	
+		e1.printStackTrace();
+	}
+	System.out.print("ho modificato");
+	
+	JOptionPane.showMessageDialog(null, "modifica effettuata");
+	
+ };//<----------update
 public void modAutostrada(String cod, String type, String nom) {
 	
 	Connection con = new database().Connect();

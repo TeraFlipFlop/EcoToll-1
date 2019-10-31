@@ -43,7 +43,7 @@ public class GestioneCaselli extends JFrame{
 	
 	public GestioneCaselli(String username) {
 		getContentPane().setLayout(null);
-		setBounds(100, 100, 450, 339);
+		setBounds(100, 100, 462, 353);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		
@@ -85,6 +85,24 @@ public class GestioneCaselli extends JFrame{
 			textField_3.setColumns(10);
 			
 			
+			
+			//BOTTONE REFRESH
+			
+JButton btnRefresh = new JButton("refresh");
+btnRefresh.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent e) {
+		GestioneCaselli f = new GestioneCaselli (username);
+		f.setVisible(true);
+		dispose();
+		
+	}
+});
+			//DIMENSIONI BOTTONE REFRESH
+
+btnRefresh.setBounds(198, 6, 117, 29);
+getContentPane().add(btnRefresh);
+			
+			
 						//SERIE DI LABEL
 			JLabel lblId = new JLabel("ID");
 			lblId.setBounds(47, 65, 61, 16);
@@ -111,8 +129,8 @@ public class GestioneCaselli extends JFrame{
 					Connection con = new database().Connect();
 					String codice= textField.getText();
 					String Km = textField_1.getText();
-					String nome = textField_2.getText();
-					String Autostrada = textField_3.getText();
+					String nome = textField_3.getText();
+					String Autostrada = textField_2.getText();
 					
 					
 					java.sql.PreparedStatement st = null;
@@ -132,6 +150,7 @@ public class GestioneCaselli extends JFrame{
 					}
 					
 						System.out.print("ci sto dentro un casino");
+						btnRefresh.doClick();
 						JOptionPane.showMessageDialog(null, "inserito");
 
 				}
@@ -161,7 +180,7 @@ public class GestioneCaselli extends JFrame{
 			
 			
 						//DIMENSIONE BOTTONE MODIFICA
-			button.setBounds(168, 225, 117, 29);
+			button.setBounds(156, 225, 117, 29);
 			getContentPane().add(button);
 			
 						//BOTTONE CANCELLA
@@ -187,6 +206,7 @@ public class GestioneCaselli extends JFrame{
 					}
 					
 						System.out.print("dovrebbe andare");
+						btnRefresh.doClick();
 						JOptionPane.showMessageDialog(null, "eliminato");
 
 				}
@@ -210,25 +230,11 @@ public class GestioneCaselli extends JFrame{
 			});
 						//Dimensioni bottone Mostra Tutto
 			
-			btnMostraTutto.setBounds(168, 266, 117, 29);
+			btnMostraTutto.setBounds(156, 263, 117, 29);
 			getContentPane().add(btnMostraTutto);
 				
 				
-							//BOTTONE REFRESH
-				
-				JButton btnRefresh = new JButton("refresh");
-				btnRefresh.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						GestioneCaselli f = new GestioneCaselli (username);
-						f.setVisible(true);
-						dispose();
-						
-					}
-				});
-							//DIMENSIONI BOTTONE REFRESH
-				
-				btnRefresh.setBounds(198, 6, 117, 29);
-				getContentPane().add(btnRefresh);
+
 				
 							//LABEL CASELLI
 				
@@ -236,8 +242,36 @@ public class GestioneCaselli extends JFrame{
 				lblGestioneCaselli.setBounds(20, 11, 103, 16);
 				getContentPane().add(lblGestioneCaselli);
 				
-					
-		}
-	}
-	
+				
+				
+				
+				ArrayList <String> codlist1 = new ArrayList <String>() ;
+				
+				codlist1 =  new AutostradaCtrl().getCodCaselli();
+				String [] codicevar1 = new String[codlist1.size()];
+				JComboBox comboBox = new JComboBox(codlist1.toArray(codicevar1));
+				
+				
+				comboBox.setBounds(157, 62, 103, 22);
+				getContentPane().add(comboBox);
+				
+				
+				
+				//COMBO BOX
+		
+				
+				comboBox.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						
+					String	codiceSelected = comboBox.getSelectedItem().toString();
+					textField.setText(codiceSelected);
+				
+				
+				
+				
+				
+									
 
+
+					}
+				});}}

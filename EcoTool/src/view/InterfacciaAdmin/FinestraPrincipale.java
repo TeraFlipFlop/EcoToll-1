@@ -27,7 +27,7 @@ import javax.swing.JLabel;
 public class FinestraPrincipale extends JFrame {
 	public FinestraPrincipale(String username) {
 		String user= username;
-		setBounds(100, 100, 450, 339);
+		setBounds(100, 100, 455, 357);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 						//BOTTONE GESTIONE AUTOSTRADE
@@ -151,7 +151,7 @@ public class FinestraPrincipale extends JFrame {
 		
 				//SCRITTA "SELEZIONA ATTIVITà"
 		
-		JLabel lblSelezionareAttivitDesiderata = new JLabel("Selezionare attività desiderata:");
+		JLabel lblSelezionareAttivitDesiderata = new JLabel("Selezionare attivit\u00E0\u00A0desiderata:");
 		lblSelezionareAttivitDesiderata.setBounds(6, 6, 194, 47);
 		getContentPane().add(lblSelezionareAttivitDesiderata);
 		

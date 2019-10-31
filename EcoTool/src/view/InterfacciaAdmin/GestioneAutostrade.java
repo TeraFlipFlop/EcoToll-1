@@ -48,7 +48,7 @@ public class GestioneAutostrade extends JFrame {
 	
 	public GestioneAutostrade(String  user) {
 		getContentPane().setLayout(null);
-		setBounds(100, 100, 450, 339);
+		setBounds(100, 100, 453, 346);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 					//BOTTONE INDIETRO
@@ -176,7 +176,7 @@ public class GestioneAutostrade extends JFrame {
 		});
 					//Dimensioni bottone Mostra Tutto
 		
-		btnMostraTutto.setBounds(168, 266, 117, 29);
+		btnMostraTutto.setBounds(168, 263, 117, 29);
 		getContentPane().add(btnMostraTutto);
 		
 		

@@ -12,7 +12,7 @@ import model.componenti.*;
 
 public class AutostradaCtrl implements AutostradaInt{
 	
-	public LinkedList<String> getAutostradebyUsername(String user) {
+	public ArrayList<String> getAutostradebyUsername(String user) {
 		 return new AutostradaDAO().AutostradeByUser(user);
 	}
 	//-----v
@@ -21,7 +21,7 @@ public class AutostradaCtrl implements AutostradaInt{
 		return new AutostradaDAO().getCodCaselli();
 	}
 	//----v
-	public LinkedList<String> getCasellibyIDautostrada(String Id){
+	public ArrayList<String> getCasellibyIDautostrada(String Id){
 
 		return new AutostradaDAO().getCasellibyIDautostrada(Id);//---V
 	}
@@ -51,11 +51,16 @@ public ArrayList<String> getIdautostradaByusername(String user) {
 
 //------X
 	
-	public void modCaselloCtrl() {};//<----------update
+		
+	//<----------update
 	public void  modAutostradaCtrl(String cod,String type,String nom) {
 		new    AutostradaDAO().modAutostrada(cod, type, nom);
 		
 		
+		
+	}
+	public void modCaselloCtrl(String codice, String km, String nome, String autostrada) {
+		new AutostradaDAO().modCasello(codice, km, nome, autostrada);
 		
 	}
 

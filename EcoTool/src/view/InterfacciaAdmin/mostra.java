@@ -63,7 +63,7 @@ public class mostra  extends JFrame{
 		
 		
 		 
-		LinkedList<String> alist=new LinkedList<String>();
+		ArrayList<String> alist=new ArrayList<String>();
 		String li="";
 		
 		
