@@ -39,7 +39,7 @@ public class ModAutostrada extends JFrame {
 	
 	public ModAutostrada(String user) {
 		getContentPane().setLayout(null);
-		setBounds(100, 100, 450, 339);
+		setBounds(100, 100, 469, 339);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		JLabel lblInserisciIdAutostrada = new JLabel("Inserisci Codice Autostrada da modificare");
@@ -51,7 +51,7 @@ public class ModAutostrada extends JFrame {
 		getContentPane().add(lblInserisciNuoviCampi);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(20, 148, 130, 26);
+		textField_1.setBounds(20, 154, 130, 26);
 		textField_1.setColumns(10);
 		getContentPane().add(textField_1);
 		
@@ -61,7 +61,7 @@ public class ModAutostrada extends JFrame {
 		getContentPane().add(textField_2);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(303, 148, 130, 26);
+		textField_3.setBounds(303, 154, 130, 26);
 		textField_3.setColumns(10);
 		getContentPane().add(textField_3);
 		
@@ -86,52 +86,44 @@ public class ModAutostrada extends JFrame {
 		lblAmministratore.setBounds(323, 186, 98, 16);
 		getContentPane().add(lblAmministratore);
 		
+		
+
+		//BOTTONE INDIETRO
+
+JButton btnIndietro = new JButton("Indietro");
+
+btnIndietro.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+	dispose();
+	GestioneAutostrade l = new GestioneAutostrade(user);
+	l.setVisible(true);
+}
+});
+			//DIMENSIONE BOTTONE INDIETRO
+
+btnIndietro.setBounds(327, 6, 117, 29);
+getContentPane().add(btnIndietro);
+
+		
 					//BOTTONE APPLICA (MODIFICA)
 		
 		JButton btnModifica = new JButton("Applica");
 		btnModifica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Connection con = new database().Connect();
-				String codice =textField_1.getText();
-				String tipo = textField_1.getText() ;
-				String nome = textField_2.getText() ;
-				String qq = "UPDATE pedaggiautostrade.autostrada SET  Nome = '"+ nome+"', Tipo = '"+ tipo  +"' WHERE (Codice ='"+  codice +"');";
-				java.sql.PreparedStatement st = null;
-				try {
-					//st=con.prepareStatement(MOD_QUERY);
-						st=con.prepareStatement(qq);
-					//st.setString(1, "qualcosa");
-		st.execute();
-					
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				System.out.print("ho modificato");
-				JOptionPane.showMessageDialog(null, "modifica effettuata");
 				
-			}
+				String codice =textField_1.getText();
+				String tipo = textField_3.getText() ;
+				String nome = textField_2.getText() ;
+				new AutostradaCtrl().modAutostradaCtrl(codice, tipo, nome);
+				btnIndietro.doClick();
+				}
+			
+		
 		});
 					//DIMENSIONE BOTTONE MODIFICA (APPLICA)
 		
 		btnModifica.setBounds(170, 243, 117, 29);
 		getContentPane().add(btnModifica);
-		
-					//BOTTONE INDIETRO
-		
-		JButton btnIndietro = new JButton("Indietro");
-		
-		btnIndietro.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-				GestioneAutostrade l = new GestioneAutostrade(user);
-				l.setVisible(true);
-			}
-		});
-						//DIMENSIONE BOTTONE INDIETRO
-		
-		btnIndietro.setBounds(327, 6, 117, 29);
-		getContentPane().add(btnIndietro);
 		
 									//COMBO BOX
 		

@@ -10,9 +10,9 @@ import model.componenti.*;
 
 public interface AutostradaInt {
 	
-	public LinkedList<String>  getAutostradebyUsername(String user) ;
+	public ArrayList<String>  getAutostradebyUsername(String user) ;
 	
-	public LinkedList<String>  getCasellibyIDautostrada(String ID);
+	public ArrayList<String>  getCasellibyIDautostrada(String ID);
 	
 	public void setAutostrada(Autostrada a, Integer lunghezza);
 	
