@@ -285,11 +285,18 @@ st.execute();
 	
 }
 
+public Casello creacasello () {
+
+	
+	return null;
+}
 	
 	
 	
 	
 };//<---------update
+
+
 		
 
 	
