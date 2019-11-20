@@ -7,7 +7,7 @@ enum Tipologia {pianura, montagna};
 public class Autostrada implements AutostradaInter {
 	private ArrayList<Casello> caselli;
 	private String id;
-	private double [] tariffe = new double[5];
+	private double [] tariffe = new double[5]; //a b 3 4 5
 	private Tipologia tipoAutostrada;
 	
 	public Autostrada(ArrayList<Casello> caselli, String id, double[] tariffa, Tipologia tipologia) {
