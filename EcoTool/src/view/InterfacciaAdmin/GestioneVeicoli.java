@@ -47,6 +47,5 @@ public class GestioneVeicoli extends JFrame {
 		txtrioDevoSchioppare.setText("-io devo schioppare perche sono inutile-\r\n+\r\n+\r\n+\r\n+\r\n+\r\n&");
 		txtrioDevoSchioppare.setBounds(52, 45, 325, 212);
 		getContentPane().add(txtrioDevoSchioppare);
-
 	}	
 }

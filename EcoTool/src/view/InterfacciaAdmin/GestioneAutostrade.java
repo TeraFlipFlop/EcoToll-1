@@ -101,8 +101,8 @@ public class GestioneAutostrade extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Connection con = new database().Connect();
 				String cod= textField.getText() ;
-				String tipo = textField_1.getText() ;
-				String nome = textField_2.getText() ;
+				String tipo = textField_1.getText();
+				String nome = textField_2.getText();
 				
 				java.sql.PreparedStatement st = null;
 				try {
