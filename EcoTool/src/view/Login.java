@@ -122,5 +122,4 @@ public class Login extends JFrame {
 	}public String getuser () {
 		return username;
 	}
-
 }
